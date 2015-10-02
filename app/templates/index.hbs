@@ -1,16 +1,15 @@
 <div class="jumbotron">
   <div class="container">
-    <h1>Welcome to Advice &amp; Advise</h1>
+    <h1>Welcome to Advice Owl</h1>
     <p>An online community for answering life's important questions.</p>
-    <button class="btn btn-warning btn-lg">{{#link-to 'about'}}Learn More &raquo;{{/link-to}}</button>
   </div>
 </div>
 
-<div>
+<div class="addQuestion">
   {{add-question saveQuestion="saveQuestion"}}
 </div>
 
-<div>
+<div class="displayQuestions">
   {{#each model as |question|}}
     {{question-tile question=question}}
   {{/each}}
