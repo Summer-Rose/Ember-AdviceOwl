@@ -1,5 +1,8 @@
+<h1>{{question.category}}</h1>
 <h2>{{question.question}}</h2>
 <p>Asked by {{question.username}}</p>
+<p>Date asked {{question.date}}</p>
+<button {{action 'deleteQuestion' question}} class="btn btn-danger">Delete</button>
 
 <div>
   {{#each question.answers as |answer|}}
