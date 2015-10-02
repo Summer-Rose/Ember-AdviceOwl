@@ -1,0 +1,11 @@
+<h2>{{question.question}}</h2>
+<p>Asked by {{question.username}}</p>
+
+<div>
+  {{#each question.answers as |answer|}}
+  <p>{{answer.answer}}</p>
+  <p>Answer submitted by: {{answer.username}}</p>
+{{/each}}
+</div>
+
+{{add-answer saveAnswer="saveAnswer" question=question}}
