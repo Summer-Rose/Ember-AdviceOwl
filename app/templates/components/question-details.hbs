@@ -3,13 +3,18 @@
   <h2>{{question.question}}</h2>
   <hr>
   <p>Asked by {{question.username}} on {{question.date}}&nbsp;<a {{action 'deleteQuestion' question}} class="glyphicon glyphicon-trash" aria-hidden="true"><span></span></a></p>
+  {{update-question question=question update="update"}}
 </div>
+<div class="row col-sm-12 col-md-12 col-lg-12" id="mainContent">
 <div class="col-sm-4 col-md-4 col-lg-4" id="addAnswer">
   {{add-answer saveAnswer="saveAnswer" question=question}}
 </div>
 <div class="col-sm-8 col-md-8 col-lg-8" id="displayAnswers">
+  <h4>Recent HootBacks</h4>
   {{#each question.answers as |answer|}}
-    <p>{{answer.answer}}</p>
-    <p>Answer submitted by: {{answer.username}}</p>
+  <div class="answerBox">
+    <p><strong>{{answer.answer}}</strong></p>
+    <p>Answer submitted by: {{answer.username}} on {{answer.date}}</p>
+  </div>
   {{/each}}
-</div>
+</div></div>
