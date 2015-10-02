@@ -6,11 +6,12 @@
 </div>
 
 
-  <div class="addQuestion col-sm-4 col-md-4 col-lg-4">
-    {{add-question saveQuestion="saveQuestion"}}
-  </div>
-  <div class="displayQuestions col-sm-8 col-md-8 col-lg-8">
-    {{#each model as |question|}}
-      {{question-tile question=question}}
-    {{/each}}
-  </div>
+<div class="col-sm-4 col-md-4 col-lg-4" id="addQuestion">
+  {{add-question saveQuestion="saveQuestion"}}
+</div>
+<div class="col-sm-8 col-md-8 col-lg-8" id="displayQuestions">
+  <h3>Recent Hoots</h3>
+  {{#each model as |question|}}
+    {{question-tile question=question}}
+  {{/each}}
+</div>
