@@ -1,14 +1,15 @@
-<h1>{{question.category}}</h1>
-<h2>{{question.question}}</h2>
-<p>Asked by {{question.username}}</p>
-<p>Date asked {{question.date}}</p>
-<button {{action 'deleteQuestion' question}} class="btn btn-danger">Delete</button>
-
-<div>
-  {{#each question.answers as |answer|}}
-  <p>{{answer.answer}}</p>
-  <p>Answer submitted by: {{answer.username}}</p>
-{{/each}}
+<p>Question > {{question.category}}</p>
+<div class="question">
+  <h2>{{question.question}}</h2>
+  <hr>
+  <p>Asked by {{question.username}} on {{question.date}}&nbsp;<a {{action 'deleteQuestion' question}} class="glyphicon glyphicon-trash" aria-hidden="true"><span></span></a></p>
 </div>
-
-{{add-answer saveAnswer="saveAnswer" question=question}}
+<div class="col-sm-4 col-md-4 col-lg-4" id="addAnswer">
+  {{add-answer saveAnswer="saveAnswer" question=question}}
+</div>
+<div class="col-sm-8 col-md-8 col-lg-8" id="displayAnswers">
+  {{#each question.answers as |answer|}}
+    <p>{{answer.answer}}</p>
+    <p>Answer submitted by: {{answer.username}}</p>
+  {{/each}}
+</div>
