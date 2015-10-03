@@ -12,7 +12,7 @@
   <div class="col-sm-8 col-md-8 col-lg-8" id="displayQuestions">
     <h3>Recent Hoots</h3>
     {{#each model as |question|}}
-      {{question-tile question=question}}
+      {{question-tile question=question deleteQuestion="deleteQuestion" update="update"}}
     {{/each}}
   </div>
 </div>
