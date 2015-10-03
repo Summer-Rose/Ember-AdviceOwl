@@ -1,12 +1,12 @@
 { "questions": [
   {
-    "question": "I have three weeks of vacation. Where should I go?",
+    "questionTitle": "I have three weeks of vacation. Where should I go?",
     "category": "Travel",
     "date": "1 October 2015",
     "username": "Summer Brochtrup"
   },
   {
-    "question": "Where is the best place to buy a reliable, refurbished Macbook?",
+    "questionTitle": "Where is the best place to buy a reliable, refurbished Macbook?",
     "category": "Computers",
     "date": "1 October 2015",
     "username": "Summer Brochtrup"
