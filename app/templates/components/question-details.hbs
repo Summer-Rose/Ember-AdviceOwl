@@ -1,6 +1,7 @@
 <p>Question > {{question.category}}</p>
+alert("update");
 <div class="question">
-  <h2>{{question.question}}</h2>
+  <h2>{{question.questionTitle}}</h2>
   <hr>
   <p>Asked by {{question.username}} on {{question.date}}&nbsp;<a {{action 'deleteQuestion' question}} class="glyphicon glyphicon-trash" aria-hidden="true"><span></span></a></p>
   {{update-question question=question update="update"}}
