@@ -8,11 +8,12 @@ export default Ember.Component.extend({
     },
 
     update(question) {
+      debugger;
       var params = {
         username: this.get('username'),
         category: this.get('category'),
-        question: this.get('question'),
-        date: Date.now()
+        questionTitle: this.get('questionTitle'),
+        date: this.get('date'),
       };
       this.set('updateQuestionForm', false);
       this.sendAction('update', question, params);
